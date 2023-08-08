@@ -24,8 +24,7 @@ class Radius
 		$attributes .= pack("CCa*", 0x02, 2 + length($pass), $pass);
 
 		$requestid = random_number(0, 255);
-		$data = 
-			pack("CCna*a*",
+		$data = pack("CCna*a*",
 				1,
 				$requestid,
 				20 + length($attributes),
@@ -64,7 +63,7 @@ class Radius
 	}
 	private function __encrypt_pass($secret, $authenticator, $password)
 	{
-		$x = $authenticator;	
+		$x = $authenticator;
 		$r = "";
 		foreach (pcre_match_all("(.{1,16})", $password)[1] as $chunk)
 		{
