@@ -23,7 +23,7 @@ Authenticate
 
 **Returns**:
 
-* On accept: an array of all returned vendor sepecific attributes for Halon (33234)
+* On accept: an array of all returned vendor specific attributes for Halon (33234)
 * On reject: 0
 * On error: -1
 
